@@ -1,21 +1,21 @@
 const calculateDistancePoints = (distance, hillSize, kPoint) => {
 
-	const normalHill = {
-		startPoints: 60,
-		meterValue: 2
-	};
+  const normalHill = {
+    startPoints: 60,
+    meterValue: 2
+  };
 
-	const bigHill = {
-		startPoints: 60,
-		meterValue: 1.8
-	};
+  const bigHill = {
+    startPoints: 60,
+    meterValue: 1.8
+  };
 
-	const giantHill = {
-		startPoints: 120,
-		meterValue: 1.2
-	};
+  const giantHill = {
+    startPoints: 120,
+    meterValue: 1.2
+  };
 
-	function getDistancePoints(hill) {
+  function getDistancePoints(hill) {
     if (distance == kPoint) {
       return hill.startPoints;
     } else {
@@ -32,7 +32,7 @@ const calculateDistancePoints = (distance, hillSize, kPoint) => {
     case 'normal':
       return getDistancePoints(normalHill);
     default:
-      return `Error: Wrong value given. Size of hill choose from: 'giant', 'big', 'normal'`;
+      return `Error: Wrong value passed. Size of hill choose from: 'giant', 'big', 'normal'`;
   }
 };
 
